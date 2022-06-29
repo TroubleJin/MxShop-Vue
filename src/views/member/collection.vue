@@ -103,7 +103,7 @@
         methods: {
             getCollection () { //获取收藏列表
               getAllFavs().then((response)=> {
-                    this.collections = response.data;
+                    this.collections = response.data.results;
                 }).catch(function (error) {
                     console.log(error);
                 });

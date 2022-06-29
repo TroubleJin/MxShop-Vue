@@ -210,7 +210,7 @@
       },
       getAllAddr () { //获得所有配送地址
         getAddress().then((response)=> {
-          this.addrInfo = response.data;
+          this.addrInfo = response.data.results;
         }).catch(function (error) {
           console.log(error);
         });
