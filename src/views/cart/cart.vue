@@ -113,8 +113,8 @@
         // 更新store数据
         //this.goods_list = response.data;
         var totalPrice = 0
-        this.goods.goods_list = response.data;
-        response.data.forEach(function(entry) {
+        this.goods.goods_list = response.data.results;
+        response.data.results.forEach(function(entry) {
           totalPrice += entry.goods.shop_price*entry.nums
           console.log(entry.goods.shop_price);
         });
@@ -224,7 +224,7 @@
         var cur_name = ''
         var cur_mobile = ''
         this.addrInfo.forEach(function(addrItem) {
-          if(addrItem.id == id){
+          if( addrItem.id == id){
             cur_address = addrItem.province+addrItem.city+addrItem.district+addrItem.address
             cur_name = addrItem.signer_name
             cur_mobile = addrItem.signer_mobile

@@ -80,7 +80,7 @@
         methods: {
             getOrder () {
                 getOrders().then((response)=> {
-                    this.orders = response.data;
+                    this.orders = response.data.results;
                 }).catch(function (error) {
                     console.log(error);
                 });
